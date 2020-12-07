@@ -12,15 +12,15 @@ Whilst at the time, the 21-pin [SCART](https://en.wikipedia.org/wiki/SCART) cabl
 
 So I started looking into the current market for this kind of device, and ended up ordering **HDV-UH50** on [AliExpress](https://www.aliexpress.com/) for €29.74 plus €0.69 (shipping costs) for a total of **€30.43**, which is several times cheaper than what I paid for my VHS recorder! It's funny there's almost no mention of the brand anywhere, apart for one line in its specifications mentioning the unknown *Feelworld*; even the box it comes in, and the device itself, are completely devoid of any branding!
 
-![The device and its remote controller](2020-02-26-hdv-uh50-review_files/device_and_remote.jpg)
+![The device and its remote controller](/assets/2020-02-26-hdv-uh50-review_device_and_remote.jpg)
 
 Its power supply unit came with a US plug that won't fit in European outlets, so I had to use my travel universal adapter. It's quite easy to setup: just feed the video from the source ("video games" in the diagram) to the HDMI IN port, connect the HDMI OUT port to the monitor/TV, and insert a FAT32 formatted USB pen into one of the two USB 2.0 ports.
 
-![The connections in the back panel](2020-02-26-hdv-uh50-review_files/connections.jpg)
+![The connections in the back panel](/assets/2020-02-26-hdv-uh50-review_connections.jpg)
 
 After turning it on, an OSD menu can be accessed by pressing the **Menu** button on the remote control. It looks like this:
 
-![The OSD menu](2020-02-26-hdv-uh50-review_files/osd_menu.jpg)
+![The OSD menu](/assets/2020-02-26-hdv-uh50-review_osd_menu.jpg)
 
 The only parameter that affects the video encoding is the **Recorder Quality**, which can be switched between "Low", "Normal" and "High", so it's really limited.
 
