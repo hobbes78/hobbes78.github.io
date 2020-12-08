@@ -4,8 +4,6 @@ title: "HDV-UH50 Video Recorder Review"
 date: 2020-02-26 18:36:35 +0000
 categories: hdmi capture
 ---
-# HDV-UH50 Video Recorder Review
-
 My VHS recorder finally died which, for a device working for more than two decades, is a testament to the durability of home appliances made in 1990's. This paved the way for the purchase of a new gadget :)
 
 Whilst at the time, the 21-pin [SCART](https://en.wikipedia.org/wiki/SCART) cable was the best available in the consumer market, nowadays [HDMI](https://en.wikipedia.org/wiki/HDMI) became the *de facto* standard, allowing digital transmission of high definition content. We evolved from VHS tapes with a [335×576](https://en.wikipedia.org/wiki/VHS#Video_recording) resolution content to 1080×1920 or better nowadays, with an associated huge leap in quality.
@@ -28,7 +26,7 @@ So, what does the recording look like? Well, here's a sample:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UuEw_uNCurA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The image is very crisp, without any blurriness or noticeable compression artifacts. And bear in mind this video was probably compressed two times: first in the capture device and then by YouTube. In particular, the MGMT videoclip portion surely had previous compressions applied to it before the rendering that was output to HDMI port.
+The image is very crisp, without any blurriness or noticeable compression artifacts. And bear in mind this video was probably compressed twice: first in the capture device and then by YouTube. In particular, the MGMT videoclip portion surely had previous compressions applied to it before the rendering that was output to HDMI port.
 
 And what about the encoding details of the generated video file? This is the output of running the [ffprobe](https://ffmpeg.org/ffprobe.html) utility:
 
@@ -136,7 +134,7 @@ The decision to save uncompressed [PCM](https://en.wikipedia.org/wiki/Pulse-code
 
 Finally, the container format could have been the popular [Matroska](https://en.wikipedia.org/wiki/Matroska) instead of [AVI](https://en.wikipedia.org/wiki/Audio_Video_Interleave), but this is really a minor detail.
 
-A second experience would be to record directly from the cable TV set-top box, but it fails because the output is protected using [HDCP](https://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection). Fortunately, I have a device that strips the copy protection, and with that in between, here's the result:
+:warning: A second experience would be to record directly from the cable TV set-top box, but it fails because the output is protected using [HDCP](https://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection). Fortunately, I have a device that strips the copy protection, and with that in between, here's the result:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pXQyKJK5b_8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
