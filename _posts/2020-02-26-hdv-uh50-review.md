@@ -28,7 +28,7 @@ So, what does the recording look like? Well, here's a sample:
 
 The image is very crisp, without any blurriness or noticeable compression artifacts. And bear in mind this video was probably compressed twice: first in the capture device and then by YouTube. In particular, the MGMT videoclip portion surely had previous compressions applied to it before the rendering that was output to HDMI port.
 
-And what about the encoding details of the generated video file? This is the output of running the [ffprobe](https://ffmpeg.org/ffprobe.html) utility:
+And what about the encoding details of the generated video file? This is the output of running the **ffprobe** (which comes with [ffmpeg](https://ffmpeg.org/)) utility:
 
 ```json
 {
@@ -134,6 +134,14 @@ The decision to save uncompressed [PCM](https://en.wikipedia.org/wiki/Pulse-code
 
 Finally, the container format could have been the popular [Matroska](https://en.wikipedia.org/wiki/Matroska) instead of [AVI](https://en.wikipedia.org/wiki/Audio_Video_Interleave), but this is really a minor detail.
 
+Anyway, for archiving purposes, compressing the sound is advisable, otherwise you'll be wasting disk space with no clear advantage. This is very simple, with the help of **qaac** (which comes with [Apple QuickTime](https://support.apple.com/kb/DL837)) and **ffmpeg**:
+
+```powershell
+ffmpeg -i REC_00000.avi -vn REC_00000.flac
+qaac64 REC_00000.flac --tvbr 82 --quality 2 --normalize -o REC_00000.aac
+ffmpeg -i REC_00000.avi -i REC_00000.aac -map 0:0 -map 1:0 -c:v copy -c:a copy REC_00000.mkv
+```
+
 :warning: A second experience would be to record directly from the cable TV set-top box, but it fails because the output is protected using [HDCP](https://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection). Fortunately, I have a device that strips the copy protection, and with that in between, here's the result:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pXQyKJK5b_8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -142,5 +150,5 @@ While the recording is done at 1080×1920, I'm still not sure if that's the orig
 
 All-in-all, it does its job and, at this price, much more can't be asked. Possible improvements:
   * Do away with the power source, as it becomes cumbersome. If the DHCP removal device is added, it's even worse! But the mere 50mA available in the HDMI cable make this wish unrealistic.
-  * It can only be used when really needed. If it's permanently connected, like the VCR recorders were at their heyday, it introduces some lag and seems to disable some image improvement processing performed by the TV.
+  * It can only be used when really needed. If it's permanently connected, like the VCR recorders were in their heyday, it introduces some lag and seems to disable some image improvement processing performed by the TV.
   * The best interface would probably be a smartphone app capable of showing a preview, but the current button to start/stop recording is good enough.
