@@ -22,7 +22,7 @@ After turning it on, an OSD menu can be accessed by pressing the **Menu** button
 
 The only parameter that affects the video encoding is the **Recorder Quality**, which can be switched between "Low", "Normal" and "High", so it's really limited.
 
-So, what does the recording look like? Well, here's a sample:
+So, what does the recording look like? Well, here's a sample, capturing the output of my laptop.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UuEw_uNCurA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -130,7 +130,7 @@ And what about the encoding details of the generated video file? This is the out
 
 The video codec used is [H.264](https://en.wikipedia.org/wiki/Advanced_Video_Coding) and, though it was superseded by both [H.265](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding) and [H.266](https://en.wikipedia.org/wiki/Versatile_Video_Coding), it's massively popular, with most smartphones featuring hardware-accelerated H.264 decoding.
 
-The decision to save uncompressed [PCM](https://en.wikipedia.org/wiki/Pulse-code_modulation) sound was probably due to implementation simplicity. But it gives you the chance to compress it afterwards exactly as you prefer, or to perform editing without impairing a quality loss, something that cannot be said regarding the video stream.
+The decision to save uncompressed [PCM](https://en.wikipedia.org/wiki/Pulse-code_modulation) sound was probably due to implementation simplicity. But it gives you the chance to compress it afterwards exactly as you prefer, or to perform editing without impairing a quality loss; the same cannot be said of the video stream.
 
 Finally, the container format could have been the popular [Matroska](https://en.wikipedia.org/wiki/Matroska) instead of [AVI](https://en.wikipedia.org/wiki/Audio_Video_Interleave), but this is really a minor detail.
 
@@ -142,11 +142,11 @@ qaac64 REC_00000.flac --tvbr 82 --quality 2 --normalize -o REC_00000.aac
 ffmpeg -i REC_00000.avi -i REC_00000.aac -map 0:0 -map 1:0 -c:v copy -c:a copy REC_00000.mkv
 ```
 
-:warning: A second experience would be to record directly from the cable TV set-top box, but it fails because the output is protected using [HDCP](https://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection). Fortunately, I have a device that strips the copy protection, and with that in between, here's the result:
+:warning: A second experience to record directly from the cable TV set-top box fails because **the output is protected using [HDCP](https://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection)**. Fortunately, I have a device that strips the copy protection, and with that in between, here's the result:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pXQyKJK5b_8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-While the recording is done at 1080×1920, I'm still not sure if that's the original TV transmission resolution, or whether it was 720×1280 and then upscaled by the set-top box.
+While the recording is done at 1080×1920, I'm still not sure if that's the original TV transmission resolution, or whether it was 720×1280 and then upscaled by the set-top box. Running **ffprobe** on the resulting file returns almost identical results with the exception of the framerate, which is now 25 fps instead of 27 fps. This happens because TV transmission in Europe uses 50 fields per second, which is somewhat equivalent to using 25 frames per second. The laptop, on the other hand, happened to be configured to output a refresh rate close to 27 Hz.
 
 All-in-all, it does its job and, at this price, much more can't be asked. Possible improvements:
   * Do away with the power source, as it becomes cumbersome. If the DHCP removal device is added, it's even worse! But the mere 50mA available in the HDMI cable make this wish unrealistic.
