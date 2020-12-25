@@ -2,5 +2,6 @@ title: Water's Edge
 author: hobbes78
 description: Musings about life, death, arts & technology
 theme: minima
+github_username: hobbes78
 plugins:
   - jemoji
