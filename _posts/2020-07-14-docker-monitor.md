@@ -6,7 +6,7 @@ categories: docker
 ---
 For professional reasons I had to start using Docker and the experience has been far from perfect. Among the many problems I had to deal with was to recurrently have the application I'm working on begin to misbehave, only to trace the cause back to an unexpectedly exited Docker container. There might be a better solution to this, but the quick fix was a quick and dirty PowerShell script:
 
-```PowerShell
+```powershell
 While (1)
 {
     $containers = & docker ps -a
