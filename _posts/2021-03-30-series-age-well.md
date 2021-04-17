@@ -14,4 +14,4 @@ But the gist here is that _a series is as good as its worst season_ so, whilst t
 
 ![Configuration of Power BI visualization](/assets/2021-03-30-series-age-well.png)
 
-A crescendo is noticeable in the number of seasons, as we got from the top to the bottom of the list, confirming that greed on milking the cow until it dries up really runs against artistic and literary creativity!
+A crescendo is noticeable in the number of seasons, as we go from the top to the bottom of the list, confirming that greed on milking the cow until it dries up really runs against artistic and literary creativity!
