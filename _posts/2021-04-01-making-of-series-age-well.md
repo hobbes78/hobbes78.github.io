@@ -47,7 +47,7 @@ How do the ratings for _Breaking Bad_ hold as the seasons pass?
 SELECT e.season_number, AVG(r.rating)
 FROM episodes e
     INNER JOIN ratings r
-	    ON e.episode_title_id = r.title_id
+        ON e.episode_title_id = r.title_id
 WHERE e.show_title_id = 'tt0903747' -- Breaking Bad
 GROUP BY e.season_number
 ORDER BY e.season_number;
@@ -81,22 +81,22 @@ Now we can combine both these queries using a CTE:
 ```sql
 WITH best_tvseries
 AS (
-	SELECT r.title_id, r.rating, r.votes, t.primary_title, t.premiered, t.ended
-	FROM ratings r
-		INNER JOIN titles t
-			ON r.title_id = t.title_id
-	WHERE t.type IN ('tvSeries', 'tvMiniSeries')
-		AND r.votes > 100000 -- At least somewhat popular
-		AND t.ended IS NOT NULL -- Only series that have finished
-	ORDER BY r.rating DESC, r.votes DESC
-	LIMIT 50
+    SELECT r.title_id, r.rating, r.votes, t.primary_title, t.premiered, t.ended
+    FROM ratings r
+        INNER JOIN titles t
+            ON r.title_id = t.title_id
+    WHERE t.type IN ('tvSeries', 'tvMiniSeries')
+        AND r.votes > 100000 -- At least somewhat popular
+        AND t.ended IS NOT NULL -- Only series that have finished
+    ORDER BY r.rating DESC, r.votes DESC
+    LIMIT 50
 )
 SELECT b.title_id, b.rating, b.votes, b.primary_title, b.premiered, b.ended, e.season_number, AVG(r.rating)
 FROM best_tvseries b
-	INNER JOIN episodes e
-		ON b.title_id = e.show_title_id
+    INNER JOIN episodes e
+        ON b.title_id = e.show_title_id
     INNER JOIN ratings r
-	    ON e.episode_title_id = r.title_id
+        ON e.episode_title_id = r.title_id
 GROUP BY b.title_id, e.season_number
 ORDER BY b.rating DESC, b.votes DESC, b.title_id, e.season_number;
 ```

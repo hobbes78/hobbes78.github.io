@@ -4,7 +4,7 @@ title: "TV Series that Age Well"
 date: 2021-03-30 17:45:19 +0100
 categories: imdb tvseries sqlite powerbi
 ---
-(check out the [making of]({% post_url 2021-04-01-making-of-series-age-well.md %}) this post!)
+(check out the [making of]({% post_url 2021-04-01-making-of-series-age-well %}) this post!)
 
 Unlike movies, TV series demand us to be invested for a considerable amount of time, so just looking at the highest ranking series on [IMDb](https://www.imdb.com/), [Rotten Tomatoes](https://www.rottentomatoes.com/) or [Metacritic](https://www.metacritic.com/) might not be enough for a wise decision regarding what TV show to watch next. Some get cancelled or have an abrupt final episode while others get extended way beyond what is reasonable. Some increase consistently in quality, season after season, while others linger in a clear writer's block, with episodes devoid of any inspiration.
 
