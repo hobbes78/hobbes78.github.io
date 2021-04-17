@@ -103,32 +103,32 @@ ORDER BY b.rating DESC, b.votes DESC, b.title_id, e.season_number;
 
 So at least both data can now be seen simultaneously:
 
-title_id | rating | votes | primary_title | premiered | ended | season_number |  AVG(r.rating)
--------- | ------ | ----- | ------------- | --------- | ----- | ------------- | --------------
-tt0903747 | 9.5 | 1486251 | Breaking Bad | 2008 | 2013 | 1 | 8.78571428571429
-tt0903747 | 9.5 | 1486251 | Breaking Bad | 2008 | 2013 | 2 | 8.86153846153846
-tt0903747 | 9.5 | 1486251 | Breaking Bad | 2008 | 2013 | 3 | 8.80769230769231
-tt0903747 | 9.5 | 1486251 | Breaking Bad | 2008 | 2013 | 4 | 9.02307692307693
-tt0903747 | 9.5 | 1486251 | Breaking Bad | 2008 | 2013 | 5 | 9.43125
-tt7366338 | 9.4 | 555775 | Chernobyl | 2019 | 2019 | 1 | 9.62
-tt0185906 | 9.4 | 380863 | Band of Brothers | 2001 | 2001 | 1 | 9.08
-tt0795176 | 9.4 | 168531 | Planet Earth | 2006 | 2006 | 1 | 8.78181818181818
-tt0944947 | 9.3 | 1788628 | Game of Thrones | 2011 | 2019 | 1 | 9.1
-tt0944947 | 9.3 | 1788628 | Game of Thrones | 2011 | 2019 | 2 | 8.96
-tt0944947 | 9.3 | 1788628 | Game of Thrones | 2011 | 2019 | 3 | 9.05
-tt0944947 | 9.3 | 1788628 | Game of Thrones | 2011 | 2019 | 4 | 9.31
-tt0944947 | 9.3 | 1788628 | Game of Thrones | 2011 | 2019 | 5 | 8.83
-tt0944947 | 9.3 | 1788628 | Game of Thrones | 2011 | 2019 | 6 | 9.06
-tt0944947 | 9.3 | 1788628 | Game of Thrones | 2011 | 2019 | 7 | 9.1
-tt0944947 | 9.3 | 1788628 | Game of Thrones | 2011 | 2019 | 8 | 6.33333333333333
-tt0306414 | 9.3 | 288748 | The Wire | 2002 | 2008 | 1 | 8.62307692307692
-tt0306414 | 9.3 | 288748 | The Wire | 2002 | 2008 | 2 | 8.53333333333333
-tt0306414 | 9.3 | 288748 | The Wire | 2002 | 2008 | 3 | 8.75833333333333
-tt0306414 | 9.3 | 288748 | The Wire | 2002 | 2008 | 4 | 8.78461538461538
-tt0306414 | 9.3 | 288748 | The Wire | 2002 | 2008 | 5 | 8.76
-tt2395695 | 9.3 | 111913 | Cosmos | 2014 | 2014 | 1 | 9.11538461538462
-tt0141842 | 9.2 | 307075 | The Sopranos | 1999 | 2007 | 1 | 8.69230769230769
-tt0141842 | 9.2 | 307075 | The Sopranos | 1999 | 2007 | 2 | 8.67692307692308
+title_id | rating | votes | primary_title | season_number |  AVG(r.rating)
+-------- | ------ | ----- | ------------- | ------------- | --------------
+tt0903747 | 9.5 | 1486251 | Breaking Bad | 1 | 8.78571428571429
+tt0903747 | 9.5 | 1486251 | Breaking Bad | 2 | 8.86153846153846
+tt0903747 | 9.5 | 1486251 | Breaking Bad | 3 | 8.80769230769231
+tt0903747 | 9.5 | 1486251 | Breaking Bad | 4 | 9.02307692307693
+tt0903747 | 9.5 | 1486251 | Breaking Bad | 5 | 9.43125
+tt7366338 | 9.4 | 555775 | Chernobyl | 1 | 9.62
+tt0185906 | 9.4 | 380863 | Band of Brothers | 1 | 9.08
+tt0795176 | 9.4 | 168531 | Planet Earth | 1 | 8.78181818181818
+tt0944947 | 9.3 | 1788628 | Game of Thrones | 1 | 9.1
+tt0944947 | 9.3 | 1788628 | Game of Thrones | 2 | 8.96
+tt0944947 | 9.3 | 1788628 | Game of Thrones | 3 | 9.05
+tt0944947 | 9.3 | 1788628 | Game of Thrones | 4 | 9.31
+tt0944947 | 9.3 | 1788628 | Game of Thrones | 5 | 8.83
+tt0944947 | 9.3 | 1788628 | Game of Thrones | 6 | 9.06
+tt0944947 | 9.3 | 1788628 | Game of Thrones | 7 | 9.1
+tt0944947 | 9.3 | 1788628 | Game of Thrones | 8 | 6.33333333333333
+tt0306414 | 9.3 | 288748 | The Wire | 1 | 8.62307692307692
+tt0306414 | 9.3 | 288748 | The Wire | 2 | 8.53333333333333
+tt0306414 | 9.3 | 288748 | The Wire | 3 | 8.75833333333333
+tt0306414 | 9.3 | 288748 | The Wire | 4 | 8.78461538461538
+tt0306414 | 9.3 | 288748 | The Wire | 5 | 8.76
+tt2395695 | 9.3 | 111913 | Cosmos | 1 | 9.11538461538462
+tt0141842 | 9.2 | 307075 | The Sopranos | 1 | 8.69230769230769
+tt0141842 | 9.2 | 307075 | The Sopranos | 2 | 8.67692307692308
 
 To visualize all this, Power BI to the rescue, using an appropriate [ODBC driver](http://www.ch-werner.de/sqliteodbc/)!
 
